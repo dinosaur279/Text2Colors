@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument('--log_path', type=str, default='./pal2color/logs')
     parser.add_argument('--image_save', type=str, default='./pal2color/images')
     parser.add_argument('--learning_rate', type=int, default=0.0002)
-    parser.add_argument('--num_epochs', type=int, default=100)
+    parser.add_argument('--num_epochs', type=int, default=10)
     parser.add_argument('--start_epoch', type=int, default=0)
     parser.add_argument('--batch_size', type=int, default=15)
     parser.add_argument('--dropout_p', type=int, default=0.2)
