@@ -66,8 +66,8 @@ def Color_Dataloader(dataset, batch_size, idx=0):
 
     if dataset == 'imagenet':
 
-        traindir = './data/imagenet/train_palette_set_origin/train_images_%d.txt' % (idx)
-        pal_traindir = './data/imagenet/train_palette_set_origin/train_palette_%d.txt' % (idx)
+        traindir = '/kaggle/input/data-text2color/data/imagenet/train_palette_set_origin/train_images_%d.txt' % (idx)
+        pal_traindir = '/kaggle/input/data-text2color/data/imagenet/train_palette_set_origin/train_palette_%d.txt' % (idx)
         
         train_dataset = LoadImagenet(traindir, pal_traindir)
         train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
@@ -79,8 +79,8 @@ def Color_Dataloader(dataset, batch_size, idx=0):
 
     elif dataset == 'bird256':
 
-        traindir = './data/bird256/train_palette/train_images_origin.txt'
-        pal_traindir = './data/bird256/train_palette/train_palette_origin.txt'
+        traindir = '/kaggle/input/data-text2color/data/bird256/train_palette/train_images_origin.txt'
+        pal_traindir = '/kaggle/input/data-text2color/data/bird256/train_palette/train_palette_origin.txt'
         
         train_dataset = LoadImagenet(traindir, pal_traindir)
         train_loader = torch.utils.data.DataLoader(dataset=train_dataset,
