@@ -52,7 +52,7 @@ if __name__ == '__main__':
     parser.add_argument('--lr', type=float, default=5e-4, help='initial learning rate')
     parser.add_argument('--num_epochs', type=int, default=10, help='number of epochs for training')
     parser.add_argument('--resume_epoch', type=int, default=None, help='resume training from this epoch')
-    parser.add_argument('--batch_size', type=int, default=32, help='batch size for training')
+    parser.add_argument('--batch_size', type=int, default=11, help='batch size for training')
     parser.add_argument('--dropout_p', type=float, default=0.2)
     parser.add_argument('--weight_decay', type=float, default=5e-5)
     parser.add_argument('--beta1', type=float, default=0.5)
