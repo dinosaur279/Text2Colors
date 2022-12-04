@@ -126,7 +126,7 @@ class Solver(object):
                                           self.args.n_layers, self.args.dropout_p, W_emb).to(self.device)
             self.G_TPN = TPN.AttnDecoderRNN(self.input_dict, self.args.hidden_size,
                                         self.args.n_layers, self.args.dropout_p).to(self.device)
-            self.G_PCN = PCN.UNet(imsize, self.args.add_L).to(self.device)
+#             self.G_PCN = PCN.UNet(imsize, self.args.add_L).to(self.device)
 
 
     def load_model(self, mode, resume_epoch):
