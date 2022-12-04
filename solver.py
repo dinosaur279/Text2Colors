@@ -383,7 +383,7 @@ class Solver(object):
             real_palettes = real_palettes.to(self.device).float()
 
             # Generate multiple palettes from same text input.
-            for num_gen in range(10):
+            for num_gen in range(2):
 
                 # Prepare input and output variables.
                 palette = torch.FloatTensor(batch_size, 3).zero_().to(self.device)
