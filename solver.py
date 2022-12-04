@@ -415,17 +415,17 @@ class Solver(object):
                     fig1, axs1 = plt.subplots(nrows=2, ncols=5)
                     axs1[0][0].set_title(input_text + 'fake {}'.format(num_gen + 1))
                     for k in range(5):
-                        lab = np.array([fake_palettes.data[x][3 * k],
-                                        fake_palettes.data[x][3 * k + 1],
-                                        fake_palettes.data[x][3 * k + 2]], dtype='float64')
+                        lab = np.array([fake_palettes.data[x][3 * k].cpu(),
+                                        fake_palettes.data[x][3 * k + 1].cpu(),
+                                        fake_palettes.data[x][3 * k + 2].cpu()], dtype='float64')
                         rgb = lab2rgb_1d(lab)
                         axs1[0][k].imshow([[rgb]])
                         axs1[0][k].axis('off')
                     axs1[1][0].set_title(input_text + 'real')
                     for k in range(5):
-                        lab = np.array([real_palettes.data[x][3 * k],
-                                        real_palettes.data[x][3 * k + 1],
-                                        real_palettes.data[x][3 * k + 2]], dtype='float64')
+                        lab = np.array([real_palettes.data[x][3 * k].cpu(),
+                                        real_palettes.data[x][3 * k + 1].cpu(),
+                                        real_palettes.data[x][3 * k + 2].cpu()], dtype='float64')
                         rgb = lab2rgb_1d(lab)
                         axs1[1][k].imshow([[rgb]])
                         axs1[1][k].axis('off')
