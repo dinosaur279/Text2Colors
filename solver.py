@@ -254,9 +254,9 @@ class Solver(object):
                         input_text += self.input_dict.index2word[idx.item()] + " "
                     axs1[0].set_title(input_text)
                     for k in range(5):
-                        lab = np.array([fake_palettes.data[x][3*k],
-                                        fake_palettes.data[x][3*k+1],
-                                        fake_palettes.data[x][3*k+2]], dtype='float64')
+                        lab = np.array([fake_palettes.data[x][3*k].cpu(),
+                                        fake_palettes.data[x][3*k+1].cpu(),
+                                        fake_palettes.data[x][3*k+2].cpu()], dtype='float64')
                         rgb = lab2rgb_1d(lab)
                         axs1[k].imshow([[rgb]])
                         axs1[k].axis('off')
