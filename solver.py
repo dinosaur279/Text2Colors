@@ -99,8 +99,8 @@ class Solver(object):
             # Optimizer.
             self.g_optimizer = torch.optim.Adam(self.G.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
             self.d_optimizer = torch.optim.Adam(self.D.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
-            self.g_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(g_optimizer, 'min', patience=5, factor=0.1)
-            self.d_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(d_optimizer, 'min', patience=5, factor=0.1)
+            self.g_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.g_optimizer, 'min', patience=5, factor=0.1)
+            self.d_scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(self.d_optimizer, 'min', patience=5, factor=0.1)
 
         elif mode == 'test_TPN' or 'test_text2colors':
             # Data loader.
