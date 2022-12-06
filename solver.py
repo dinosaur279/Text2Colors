@@ -97,8 +97,8 @@ class Solver(object):
             self.D = PCN.Discriminator(self.args.add_L, imsize).to(self.device)
 
             # Optimizer.
-            self.g_optimizer = optim.Adam(self.G.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
-            self.d_optimizer = optim.Adam(self.D.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
+            self.g_optimizer = torch.optim.Adam(self.G.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
+            self.d_optimizer = torch.optim.Adam(self.D.parameters(), lr=self.args.lr, weight_decay=self.args.weight_decay)
             self.g_scheduler = scheduler.ReduceLROnPlateau(g_optimizer, 'min', patience=5, factor=0.1)
             self.d_scheduler = scheduler.ReduceLROnPlateau(d_optimizer, 'min', patience=5, factor=0.1)
 
