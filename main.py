@@ -50,7 +50,7 @@ if __name__ == '__main__':
                         choices=['train_TPN', 'train_PCN', 'test_TPN', 'test_text2colors'])
     parser.add_argument('--dataset', type=str, default='bird256', choices=['imagenet', 'bird256'])
     parser.add_argument('--lr', type=float, default=5e-4, help='initial learning rate')
-    parser.add_argument('--num_epochs', type=int, default=100, help='number of epochs for training')
+    parser.add_argument('--num_epochs', type=int, default=500, help='number of epochs for training')
     parser.add_argument('--resume_epoch', type=int, default=None, help='resume training from this epoch')
     parser.add_argument('--batch_size', type=int, default=32, help='batch size for training')
     parser.add_argument('--dropout_p', type=float, default=0.2)
